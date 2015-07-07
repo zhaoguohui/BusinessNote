@@ -10,6 +10,7 @@
 #import "SPDetailViewController.h"
 #import "SPAppDelegate.h"
 #import "Todo.h"
+#import "BusinessState.h"
 
 @interface SPMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -303,6 +304,83 @@
 
 - (void)insertNewObject
 {
+    // 插入业务状态数据
+    BusinessState *state = [NSEntityDescription insertNewObjectForEntityForName:@"BusinessState" inManagedObjectContext:self.fetchedResultsController.managedObjectContext];
+    state.code = @5;
+    state.company_id = @"99e16a3c35354857bd31a6300cbe7576";
+    state.name = @"继续跟进";
+    state.isopen = @1;
+    state.update_time = @"2015-01-25 14:51:06";
+    state.identifier = @"0363f10ad2614c188054478a057afff7";
+    
+    //
+    BusinessState *state1 = [NSEntityDescription insertNewObjectForEntityForName:@"BusinessState" inManagedObjectContext:self.fetchedResultsController.managedObjectContext];
+    state1.code = @7;
+    state1.company_id = @"99e16a3c35354857bd31a6300cbe7576";
+    state1.name = @"丢单";
+    state1.isopen = @1;
+    state1.update_time = @"2015-01-25 14:51:06";
+    state1.identifier = @"266b6f349d304b26a8e6431dd3e6e168";
+    
+    //
+    BusinessState *state2 = [NSEntityDescription insertNewObjectForEntityForName:@"BusinessState" inManagedObjectContext:self.fetchedResultsController.managedObjectContext];
+    state2.code = @4;
+    state2.company_id = @"99e16a3c35354857bd31a6300cbe7576";
+    state2.name = @"正式报价";
+    state2.isopen = @1;
+    state2.update_time = @"2015-01-25 14:51:06";
+    state2.identifier = @"3f1bd7517170472fb1a2aeeeadd991f4";
+    
+    //
+    BusinessState *state3 = [NSEntityDescription insertNewObjectForEntityForName:@"BusinessState" inManagedObjectContext:self.fetchedResultsController.managedObjectContext];
+    state3.code = @6;
+    state3.company_id = @"99e16a3c35354857bd31a6300cbe7576";
+    state3.name = @"成交";
+    state3.isopen = @1;
+    state3.update_time = @"2015-01-25 14:51:06";
+    state3.identifier = @"54fb1a3dd6c44a9195800a5dccb7fc20";
+    
+    //
+    BusinessState *state4 = [NSEntityDescription insertNewObjectForEntityForName:@"BusinessState" inManagedObjectContext:self.fetchedResultsController.managedObjectContext];
+    state4.code = @2;
+    state4.company_id = @"99e16a3c35354857bd31a6300cbe7576";
+    state4.name = @"初步反馈";
+    state4.isopen = @1;
+    state4.update_time = @"2015-01-25 14:51:06";
+    state4.identifier = @"7f14d38d2e304f1887b6e0c493c85fb4";
+    
+    //
+    BusinessState *state5 = [NSEntityDescription insertNewObjectForEntityForName:@"BusinessState" inManagedObjectContext:self.fetchedResultsController.managedObjectContext];
+    state5.code = @1;
+    state5.company_id = @"99e16a3c35354857bd31a6300cbe7576";
+    state5.name = @"初步沟通";
+    state5.isopen = @1;
+    state5.update_time = @"2015-01-25 14:51:06";
+    state5.identifier = @"85f1f699220c41009f4b250840b8d400";
+    
+    //
+    BusinessState *state6 = [NSEntityDescription insertNewObjectForEntityForName:@"BusinessState" inManagedObjectContext:self.fetchedResultsController.managedObjectContext];
+    state6.code = @8;
+    state6.company_id = @"99e16a3c35354857bd31a6300cbe7576";
+    state6.name = @"售后";
+    state6.isopen = @1;
+    state6.update_time = @"2015-01-25 14:51:06";
+    state6.identifier = @"90a094cf982146199b1e3987dc63fe78";
+    
+    //
+    BusinessState *state7 = [NSEntityDescription insertNewObjectForEntityForName:@"BusinessState" inManagedObjectContext:self.fetchedResultsController.managedObjectContext];
+    state7.code = @3;
+    state7.company_id = @"99e16a3c35354857bd31a6300cbe7576";
+    state7.name = @"见面拜访";
+    state7.isopen = @1;
+    state7.update_time = @"2015-01-25 14:51:06";
+    state7.identifier = @"b4dbcf93881f4e82bd00f74f79179646";
+    
+    if ([self.fetchedResultsController.managedObjectContext hasChanges]) {
+        [self.fetchedResultsController.managedObjectContext save:nil];
+    }
+    
+    return;
     // Create a new instance of the entity managed by the fetched results controller.
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];

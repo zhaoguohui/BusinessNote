@@ -23,6 +23,7 @@
 		26156AF714EC405F003332BA /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 26156AF614EC405F003332BA /* Todo.m */; };
 		26C93A7514F86D1800BE99F5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C93A7214F86D1800BE99F5 /* icon.png */; };
 		26C93A7614F86D1800BE99F5 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C93A7314F86D1800BE99F5 /* icon@2x.png */; };
+		C430BE531B4BD5DD008406D5 /* BusinessState.m in Sources */ = {isa = PBXBuildFile; fileRef = C430BE521B4BD5DD008406D5 /* BusinessState.m */; };
 		C4D109AC1AEA1CAA00BB5FCF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D109AB1AEA1CAA00BB5FCF /* SystemConfiguration.framework */; };
 		C4D109AE1AEA1CBB00BB5FCF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D109AD1AEA1CBB00BB5FCF /* MobileCoreServices.framework */; };
 		C4D109B01AEA1CC100BB5FCF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D109AF1AEA1CC100BB5FCF /* CFNetwork.framework */; };
@@ -80,6 +81,8 @@
 		2620CFC8153DEC2B00AD5E5F /* Simpletodo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Simpletodo-Info.plist"; sourceTree = "<group>"; };
 		26C93A7214F86D1800BE99F5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		26C93A7314F86D1800BE99F5 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		C430BE511B4BD5DD008406D5 /* BusinessState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessState.h; sourceTree = "<group>"; };
+		C430BE521B4BD5DD008406D5 /* BusinessState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessState.m; sourceTree = "<group>"; };
 		C4D109AB1AEA1CAA00BB5FCF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C4D109AD1AEA1CBB00BB5FCF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C4D109AF1AEA1CC100BB5FCF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -152,6 +155,7 @@
 		26156AD314EC3D4C003332BA /* Simpletodo */ = {
 			isa = PBXGroup;
 			children = (
+				C430BE4C1B4BD5C7008406D5 /* Models */,
 				26156AF514EC405F003332BA /* Todo.h */,
 				26156AF614EC405F003332BA /* Todo.m */,
 				26156ADC14EC3D4C003332BA /* SPAppDelegate.h */,
@@ -177,6 +181,15 @@
 				26156ADB14EC3D4C003332BA /* Simpletodo-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C430BE4C1B4BD5C7008406D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C430BE511B4BD5DD008406D5 /* BusinessState.h */,
+				C430BE521B4BD5DD008406D5 /* BusinessState.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C4D109D21AEA205400BB5FCF /* Products */ = {
@@ -291,6 +304,7 @@
 				26156AEA14EC3D4C003332BA /* SPMasterViewController.m in Sources */,
 				26156AED14EC3D4C003332BA /* SPDetailViewController.m in Sources */,
 				26156AF714EC405F003332BA /* Todo.m in Sources */,
+				C430BE531B4BD5DD008406D5 /* BusinessState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

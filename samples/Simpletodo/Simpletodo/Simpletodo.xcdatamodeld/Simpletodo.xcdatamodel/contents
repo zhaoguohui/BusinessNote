@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14C109" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14C109" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BusinessState" representedClassName="BusinessState" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="company_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ghostData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isopen" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="simperiumKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="update_time" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Todo" representedClassName="Todo" syncable="YES">
         <attribute name="done" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="ghostData" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,5 +19,6 @@
     </entity>
     <elements>
         <element name="Todo" positionX="180" positionY="297" width="128" height="120"/>
+        <element name="BusinessState" positionX="180" positionY="333" width="128" height="165"/>
     </elements>
 </model>
